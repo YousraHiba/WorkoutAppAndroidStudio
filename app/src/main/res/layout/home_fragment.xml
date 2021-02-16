@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="loginModel"
+            type="com.example.workouttest.viewModel.HomeViewModel" />
+
+    </data>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+
+    <TextView
+        android:id="@+id/userNameInformations"
+        android:layout_width="201dp"
+        android:layout_height="69dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="150dp"
+        android:text=""
+
+        android:textSize="30dp">
+
+
+    </TextView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp" />
+
+    <TextView
+        android:id="@+id/startWorkout"
+        android:layout_width="227dp"
+        android:layout_height="58dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="300dp"
+        android:background="@color/button"
+        android:text="Start"
+        android:textAlignment="center"
+
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+
+</FrameLayout>
+
+</layout>

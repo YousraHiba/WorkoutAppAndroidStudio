@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="loginModel"
+            type="com.example.workouttest.LoginViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/noRegister"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.LoginFragment">
+
+
+        <ImageView
+            android:layout_width="203dp"
+            android:layout_height="138dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="39dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/button_second"
+            android:layout_width="161dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="166dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="185dp"
+            android:layout_marginBottom="176dp"
+            android:background="@color/button"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.405"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login"
+            app:layout_constraintVertical_bias="0.433" />
+
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="50dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:text="@={loginModel.email}"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="50dp"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:text="@={loginModel.password}"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="213dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="400dp"
+            android:layout_marginEnd="103dp"
+            android:layout_marginBottom="79dp"
+            android:text="Not a Member? Register."
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/button_second"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
